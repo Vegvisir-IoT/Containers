@@ -1,0 +1,9 @@
+.DS_Store
+*.DS_Store
+testbed/.DS_Store
+*.swp
+protobuf-java-3.0.0.jar
+protoc-3.0.0-linux-x86_64.zip
+Python-3.5.6.tgz
+protoc-gen-javalite-3.0.0-linux-x86_64.zip
+jdk-11.0.2_linux-x64_bin.tar.gz
