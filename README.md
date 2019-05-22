@@ -13,11 +13,15 @@ you have docker installed. If you do not have docker installed, please visit
 the appropriate website to have it installed. If you would want to be able
 to build the container from scractch yourself you will need the following
 files:
+
 - protobuf-java-3.0.0.jar
 - protoc-3.0.0-linux-x86_64.zip
 - Python-3.5.6.tgz 
 - protoc-gen-javalite-3.0.0-linux-x86_64.zip
+- protobuf-python-3.0.0.tar.gz
 - jdk-11.0.2_linux-x64_bin.tar.gz
+
+* Protobuf files can be found @ https://github.com/protocolbuffers/protobuf/releases
 
 These changes are reflected in the .gitignore file.
 #### How to Run the protobuf compilations

@@ -7,9 +7,9 @@ setup:
 	sudo service docker restart
 
 server:
-	docker run --rm -ti -p 9191:9191 dadams39/demo  java ProtoServer.java
+	docker run --rm -ti -p 9191:9191 dadams39/demo ./gradlew run 
 client:
-	docker run --rm -ti -p 9000:9000 dadams39/demo python client.py
+	docker run --rm -ti -p 9000:9000 dadams39/demo python app/src/main/python/client.py
 
 clean:
 	-docker ps -a -q | xargs docker rm
