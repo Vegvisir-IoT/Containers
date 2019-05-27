@@ -39,10 +39,12 @@ RUN  /bootstrap.sh
 RUN rm jdk-11.0.2_linux-x64_bin.tar.gz protobuf-python-3.0.0.tar.gz \
     protoc-3.0.0-linux-x86_64.zip protoc-gen-javalite-3.0.0-linux-x86_64.zip \
     && rm -rf proto_lite
-RUN mkdir /home/trials && apt-get install screen
+RUN mkdir /home/trials && mkdir /home/shared && apt-get install screen
 COPY testbed/ /home/trials
+COPY .bashrc /root/
+COPY .vimrc /root/
 EXPOSE 9191 9000 9001 9002 9003 9004
-WORKDIR /home/trials/PingPongSamples/java
+WORKDIR /home/trials/
 ## User not being used until password token can be set
 #RUN useradd -ms /bin/bash thanos
 # USER thanos
