@@ -4,7 +4,8 @@ FROM python:3.6.8-jessie
 WORKDIR /home/
 #RUN add-apt-repository ppa:ubuntu-toolchain-r/test -y && apt-get update
 #RUN echo "ipv6" >> /etc/modules
-RUN apt-get update && apt-get install -y less vim make git screen curl tar
+RUN apt-get update && apt-get install -y less vim make git screen curl tar \
+    unzip zip tmux
 RUN mkdir installs
 WORKDIR installs
 COPY jdk-11.0.2_linux-x64_bin.tar.gz .
@@ -17,8 +18,7 @@ RUN mkdir /opt/jdk && tar -zxf jdk-11.0.2_linux-x64_bin.tar.gz -C /opt/jdk \
     && update-alternatives --install /usr/bin/javac javac /opt/jdk/jdk-11.0.2/bin/javac 100 \
     && java -version
 ## Step 4: Install Protoc
-RUN apt-get install -y unzip zip curl \
-    && unzip protoc-3.0.0-linux-x86_64.zip -d protoc3 \
+RUN unzip protoc-3.0.0-linux-x86_64.zip -d protoc3 \
     && mv protoc3/bin/* /usr/local/bin/ \
     && mv protoc3/include/* /usr/local/include/ \
     && ln -s /protoc3/bin/protoc /usr/bin/protoc
@@ -39,7 +39,7 @@ RUN  /bootstrap.sh
 RUN rm jdk-11.0.2_linux-x64_bin.tar.gz protobuf-python-3.0.0.tar.gz \
     protoc-3.0.0-linux-x86_64.zip protoc-gen-javalite-3.0.0-linux-x86_64.zip \
     && rm -rf proto_lite
-RUN mkdir /home/trials && mkdir /home/shared && apt-get install screen
+RUN mkdir /home/trials && mkdir /home/shared
 COPY testbed/ /home/trials
 COPY .bashrc /root/
 COPY .vimrc /root/
