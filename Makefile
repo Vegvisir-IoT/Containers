@@ -42,7 +42,7 @@ baremetal:
 	tar -xvf protobuf-python-3.0.0.tar.gz && \
 	cd protobuf-3.0.0/python && sudo python3 setup.py build \
 	&& sudo python3 setup.py install
-	sudo pip install cryptography && pip3 install factory_boy
+	sudo pip install cryptography && sudo pip3 install factory_boy
 	## Step 6: Install Gradle
 	curl -s "https://get.sdkman.io" | bash
 	bash bootstrap.sh
