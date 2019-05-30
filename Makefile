@@ -15,7 +15,8 @@ baremetal:
 	# Note that sudo has to be called to access certain directories
 	sudo apt-get update && sudo apt-get upgrade --yes
 	sudo apt-get install -y less vim make git screen tmux curl tar wget unzip zip
-	mkdir ~/installs
+	sudo apt-get install -y python-setuptools && sudo apt-get install -y python3-setuptools
+	sudo easy_install pip && sudo easy_install3 pip && mkdir ~/installs
 	cd ~/installs && wget http://cs.cornell.edu/~dadams39/protobuf-java-3.0.0.jar &&\
 	wget http://cs.cornell.edu/~dadams39/protobuf-python-3.0.0.tar.gz && \
 	wget http://cs.cornell.edu/~dadams39/protoc-3.0.0-linux-x86_64.zip && \
@@ -33,7 +34,7 @@ baremetal:
 	&& sudo mv protoc3/bin/* /usr/local/bin/ \
 	&& sudo mv protoc3/include/* /usr/local/include/ \
 	&& sudo ln -s /protoc3/bin/protoc /usr/bin/protoc && \
-	cp sudo protobuf-java-3.0.0.jar /opt/jdk
+	sudo cp protobuf-java-3.0.0.jar /opt/jdk
 	## Install Protobuf submodules
 	cd ~/installs/ && \
 	unzip protoc-gen-javalite-3.0.0-linux-x86_64.zip -d proto_lite && \
