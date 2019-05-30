@@ -40,8 +40,8 @@ baremetal:
 	unzip protoc-gen-javalite-3.0.0-linux-x86_64.zip -d proto_lite && \
 	sudo mv proto_lite/bin/* /usr/local/bin/ && \
 	tar -xvf protobuf-python-3.0.0.tar.gz && \
-	cd protobuf-3.0.0/python && sudo python setup.py build \
-	&& sudo python setup.py install
+	cd protobuf-3.0.0/python && sudo python3 setup.py build \
+	&& sudo python3 setup.py install
 	sudo pip install cryptography && pip3 install factory_boy
 	## Step 6: Install Gradle
 	curl -s "https://get.sdkman.io" | bash
