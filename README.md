@@ -22,6 +22,7 @@ files:
 - jdk-11.0.2_linux-x64_bin.tar.gz
 
 * Protobuf files can be found @ https://github.com/protocolbuffers/protobuf/releases
+* All the packages, save Python, can be downloaded executing `$ make download ` 
 
 These changes are reflected in the .gitignore file.
 #### How to Run the protobuf compilations
@@ -32,8 +33,14 @@ These changes are reflected in the .gitignore file.
 -  ProtoLite
    `$ protoc --javalite_out=$DST_DIR /path/to/.proto `
 
-#### Deploy on a Linux Server in Emulab
+#### Set-up Container Dependencies
 - `$ make`
+
+#### Recreate Environment on baremetal machine
+- `$ make baremetal`
+
+- `$ make cloud` to be used in Emulab environment where certain packages have
+already been downloaded
 #### How to Run a server with port exposed...
 - `$ make server`
 #### How to run a client
