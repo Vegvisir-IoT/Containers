@@ -14,7 +14,7 @@ client:
 download:
 	mkdir ~/installs
 	cd ~/installs && wget http://cs.cornell.edu/~dadams39/protobuf-python-3.0.0.tar.gz && \
-	wget http://cs.cornell.edu/~dadams39/protoc-3.0.0-linux-x86_64.zip && \
+	wget http://cs.cornell.edu/~dadams39/protoc-3.0.0-linux-x86_64.zip
 
 cloud:
 	sudo apt-get update && sudo apt-get upgrade --yes
