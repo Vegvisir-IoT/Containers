@@ -3,7 +3,6 @@ FROM python:3.6.8-jessie
 
 ## Step 2: Get protobuf and its compiler
 WORKDIR /home/
-<<<<<<< HEAD
 RUN apt-get update && apt-get install -y less vim make git screen curl tar \
     unzip zip tmux
 RUN mkdir installs
@@ -23,7 +22,6 @@ RUN tar -xvf protobuf-python-3.0.0.tar.gz && cd protobuf-3.0.0/python \
     && pip install cryptography && pip3 install factory_boy
 
 ## Step 5: Clean-up
-<<<<<<< HEAD
 RUN rm protobuf-python-3.0.0.tar.gz \
     protoc-3.0.0-linux-x86_64.zip
  
