@@ -13,11 +13,8 @@ client:
 
 download:
 	mkdir ~/installs
-	cd ~/installs && wget http://cs.cornell.edu/~dadams39/protobuf-java-3.0.0.jar &&\
-	wget http://cs.cornell.edu/~dadams39/protobuf-python-3.0.0.tar.gz && \
+	cd ~/installs && wget http://cs.cornell.edu/~dadams39/protobuf-python-3.0.0.tar.gz && \
 	wget http://cs.cornell.edu/~dadams39/protoc-3.0.0-linux-x86_64.zip && \
-	wget http://cs.cornell.edu/~dadams39/protoc-gen-javalite-3.0.0-linux-x86_64.zip && \
-	wget http://cs.cornell.edu/~dadams39/jdk-11.0.2_linux-x64_bin.tar.gz
 
 cloud:
 	sudo apt-get update && sudo apt-get upgrade --yes
