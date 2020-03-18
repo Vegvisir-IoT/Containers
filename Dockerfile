@@ -2,7 +2,7 @@
 FROM python:3.6.8-jessie
 
 ## Step 2: Get protobuf and its compiler
-WORKDIR /home/
+WORKDIR /home/gbr26/
 RUN apt-get update && apt-get install -y less vim make git screen curl tar \
     unzip zip tmux
 RUN mkdir installs
