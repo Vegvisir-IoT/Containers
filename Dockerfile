@@ -25,8 +25,8 @@ RUN tar -xvf protobuf-python-3.0.0.tar.gz && cd protobuf-3.0.0/python \
 RUN rm protobuf-python-3.0.0.tar.gz \
     protoc-3.0.0-linux-x86_64.zip
  
-COPY .bashrc /root/
-COPY .vimrc /root/
+#COPY .bashrc /root/
+#COPY .vimrc /root/
 #EXPOSE 9191 9000 9001 9002 9003 9004
 ## User not being used until password token can be set
 #RUN useradd -ms /bin/bash thanos
